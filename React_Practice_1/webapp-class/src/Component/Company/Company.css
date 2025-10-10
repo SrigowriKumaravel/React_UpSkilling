@@ -1,0 +1,23 @@
+.company-title{
+    color: rgb(22,123,5);
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    padding: 0%;
+    margin: auto;
+}
+
+.details{
+    font-size: 1.4rem;
+    letter-spacing: 0.1rem;
+    margin-bottom: 1rem;
+    background-color: white;
+    color:black;
+    padding:1rem;
+    width:500px;
+    border-radius: 0.8rem;
+    box-shadow: 10px 10px 10px rgba(0,0,0,0.3);
+}
+
+span{
+    color:rgb(254,89,89);
+}

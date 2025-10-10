@@ -1,25 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import { Component } from "react";
+import { companies } from "./Dataset.js";
+import "./App.css";
+import Company from "./Component/Company/Company.js";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  state = {
+    selectedCompany: "Select Company",
+  };
+
+  handleCompanySelection = (companyName) => {
+    this.setState({ selectedCompany: companyName });
+  };
+
+  render() {
+    const { selectedCompany } = this.state;
+
+    return (
+      <div className="container">
+        <h1 className="main-title">{selectedCompany}</h1>
+        {companies.map((company) => (
+          <Company
+            key={company.id}
+            companyName={company.companyName}
+            details={company.details}
+            departments={company.departments}
+            onCompanySelect={this.handleCompanySelection}
+          />
+        ))}
+      </div>
+    );
+  }
 }
 
 export default App;
