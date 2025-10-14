@@ -5,6 +5,8 @@ import Cart from "./components/state/Cart.jsx";
 import EffectSample from "./components/effect/EffectSample.jsx";
 import GitHubUsers from "./components/effect/GitHubUsers.jsx";
 import Timer from "./components/effect/Timer.jsx";
+import Home from "./components/home/Home.jsx";
+import LoginForm from "./components/ref/LoginForm.jsx";
 
 function App(props) {
   return (
@@ -13,7 +15,9 @@ function App(props) {
       {/* <Cart /> */}
       {/* <EffectSample /> */}
       {/* <GitHubUsers/> */}
-      <Timer />
+      {/* <Timer /> */}
+      {/* <Home /> */}
+      <LoginForm />
     </div>
   );
 }
