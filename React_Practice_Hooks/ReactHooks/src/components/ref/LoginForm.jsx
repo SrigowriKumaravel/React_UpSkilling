@@ -8,7 +8,7 @@ function LoginForm(props) {
   const refContainer = useRef(null);
 
   useEffect(() => {
-    console.log(email);
+    console.log(refContainer);
     console.log(password);
   });
 
@@ -38,7 +38,7 @@ function LoginForm(props) {
       <form className="form" onSubmit={handleLogin}>
         <label htmlFor="email">Email</label>
         {/* Uncontrolled Input */}
-        <input type="text" value={email} ref={refContainer} defaultValue="" />
+        <input type="text" ref={refContainer} />
         <label htmlFor="password">Password</label>
         {/* Controlled Input */}
         <input

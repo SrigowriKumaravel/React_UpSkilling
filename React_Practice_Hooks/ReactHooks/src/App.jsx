@@ -7,6 +7,13 @@ import GitHubUsers from "./components/effect/GitHubUsers.jsx";
 import Timer from "./components/effect/Timer.jsx";
 import Home from "./components/home/Home.jsx";
 import LoginForm from "./components/ref/LoginForm.jsx";
+import TaskApp from "./components/reducer/TaskApp.jsx";
+//import Student from "./components/context/withContext/Student.jsx";
+// import Student from "./components/context/withoutContext/Student.jsx";
+import ButtonClickCounter from "./components/callback/ButtonClickCounter.jsx";
+import WithoutTransition from "./components/transition/WithoutTransition.jsx";
+import LargeListFilter from "./components/transition/LargeListFilter.jsx";
+import NameFilterComponent from './components/customHook/NameFilterComponent.jsx';
 
 function App(props) {
   return (
@@ -17,7 +24,14 @@ function App(props) {
       {/* <GitHubUsers/> */}
       {/* <Timer /> */}
       {/* <Home /> */}
-      <LoginForm />
+      {/* <LoginForm /> */}
+      {/* <Student /> */}
+      {/* <Student /> */}
+      {/* <TaskApp /> */}
+      {/* <ButtonClickCounter /> */}
+      {/* <WithoutTransition /> */}
+      {/* <LargeListFilter /> */}
+      <NameFilterComponent/>
     </div>
   );
 }
