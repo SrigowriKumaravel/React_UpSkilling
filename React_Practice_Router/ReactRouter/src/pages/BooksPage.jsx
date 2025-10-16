@@ -9,6 +9,10 @@ function BooksPage(props) {
   const NavigateHome = () => {
     navigate("/");
   };
+
+  const NavigateToProductDetails = (id) => {
+    navigate(`${id}`);
+  };
   return (
     <div>
       <div className="card-header">
@@ -16,7 +20,7 @@ function BooksPage(props) {
         {/* <Link to={"/"} className="btn-danger-link">
           Home
         </Link> */}
-        <button className="btn-danger-link" onClick={navigateHome}>
+        <button className="btn-danger-link" onClick={NavigateHome}>
           Home
         </button>
       </div>
@@ -37,9 +41,17 @@ function BooksPage(props) {
                 <span className="product-details">Price:</span>
                 {item.price}
               </p>
-              <Link className="btn-link" to={``}>
+              {/* <Link className="btn-link" to={`/books/${item.id}`}>
                 View Books
-              </Link>
+              </Link> */}
+              <button
+                className="btn-link"
+                onClick={() => {
+                  NavigateToProductDetails(item.id);
+                }}
+              >
+                View Books
+              </button>
             </div>
           );
         })}

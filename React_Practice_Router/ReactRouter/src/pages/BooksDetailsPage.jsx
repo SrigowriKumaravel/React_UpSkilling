@@ -1,11 +1,11 @@
 import React from "react";
-import { electronics } from "../../../Dataset/dataset";
+import { books } from "../../../Dataset/dataset";
 import { useParams } from "react-router-dom";
-import ElectronicDetails from "../components/ElectronicDetails";
+import BookDetails from "../components/BookDetails";
 
-function ElectronicsDetailsPage(props) {
+function BooksDetailsPage(props) {
   const { id } = useParams();
-  const item = electronics.find((x) => x.id === +id);
+  const item = books.find((x) => x.id === +id);
 
   if (!item) {
     return (
@@ -20,10 +20,10 @@ function ElectronicsDetailsPage(props) {
     <div className="sidebar">
       <h1>Product Details</h1>
       <div className="sidebar-content">
-        <ElectronicDetails product={item} />
+        <BookDetails product={item} />
       </div>
     </div>
   );
 }
 
-export default ElectronicsDetailsPage;
+export default BooksDetailsPage;

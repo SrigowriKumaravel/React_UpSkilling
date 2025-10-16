@@ -24,7 +24,7 @@ function ElectronicsPage(props) {
                 <span className="product-details">Price:</span>
                 {item.price}
               </p>
-              <Link className="btn-link" to={``}>
+              <Link className="btn-link" to={`${item.id}`}>
                 View Product
               </Link>
             </div>
